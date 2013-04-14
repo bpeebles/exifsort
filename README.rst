@@ -24,8 +24,24 @@ Supported file formats
 - MOV
 - AVI
 
-Example usage
-=============
+Usage
+=====
+
+::
+
+    Usage: exifsort.py [options] src-dir dest-dir
+
+    Copy or move digital pictures or movies using EXIF or filesystem timestamps in
+    a way that was idiosyncratic to the author.
+
+    Options:
+    --version      show program's version number and exit
+    -h, --help     show this help message and exit
+    -m, --move     move instead of copying
+    -v, --verbose  verbose mode
+
+Examples
+========
 
 Run::
 
@@ -42,7 +58,7 @@ etc.
 TODO
 ====
 
-- Make target directories configurable.
+- Make target directories name formatting configurable.
 
 - Support muiltple targets with a single pass (use case: multiple external
   harddrives for backup).

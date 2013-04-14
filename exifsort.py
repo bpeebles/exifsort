@@ -6,13 +6,6 @@
 Copy or move digital pictures or movies using EXIF or filesystem
 timestamps in a way that was idiosyncratic to the author.
 
-Usage: exifsort.py [options] src-dir dest-dir
-
-Options:
-  --version   show program's version number and exit
-  -h, --help  show this help message and exit
-  -m, --move
-
 See LICENSE.txt for licensing."""
 
 __version__ = '0.1'
