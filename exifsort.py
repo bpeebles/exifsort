@@ -70,7 +70,7 @@ def sort_dir(src, dest, move=False):
         dest_dir = os.path.join(dest, when.strftime('%Y_%m_%d'))
         dest_file = os.path.join(dest_dir, os.path.basename(filename))
         if not os.path.exists(dest_dir):
-            os.mkdir(dest_dir)
+            os.makedirs(dest_dir)
         if not os.path.exists(dest_file):
             if move:
                 log.info("moving from {filename} to {dest_dir}".format(
@@ -86,8 +86,7 @@ def sort_dir(src, dest, move=False):
             log.warn("{filename} already exists! skipping".format(filename=filename))
 
 def main(argv=None):
-    if argv is None:
-        argv = sys.argv
+    argv = argv or sys.argv
     usage = "usage: %prog [options] src-dir dest-dir"
     parser = OptionParser(usage, version="%prog version {0}".format(__version__),
                           description=(
